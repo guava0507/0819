@@ -1,0 +1,22 @@
+Create database person default character set utf8;
+
+use person;
+
+create table city
+(
+    cityId int primary key,
+    cityName varchar(20)
+);
+insert into city values
+(2,'Zhongli'),(4,'Taoyuan'),(6,'Pingtong');
+
+create table employee
+(
+    employeeId int auto_increment primary key,
+    firstName varchar(20),
+    lastName varchar(20),
+    cityId int 
+);
+
+insert into employee (firstName,lastName,cityId) values
+('Ｂill','Chiu',2),('Toby','Yuan',4),('Alan','Wang',6);
