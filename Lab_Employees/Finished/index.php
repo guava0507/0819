@@ -6,7 +6,7 @@ $result = mysqli_query ( $link, "set names utf8" );
 mysqli_select_db ( $link, $dbname );
 $commandText = <<<SqlQuery
 select id, firstName, lastName, title, picture,
-  (select count(*) from employee where managerId = e.id) as reportCount
+ (select count(*) from employee where managerId = e.id) as reportCount
   from employee e
 SqlQuery;
 
